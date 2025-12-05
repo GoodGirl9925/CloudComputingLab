@@ -34,7 +34,7 @@ jobs:
   deploy-prod:
     needs: [test-job1, test-job2] # 只有当两个测试作业都成功后才运行
     runs-on: ubuntu-latest
-environment: production # GitHub 的环境部署功能
+    environment: production # GitHub 的环境部署功能
     steps:
       - name: Deploy script
         # ${{ github.ref_name }} 对应 $CI_COMMIT_BRANCH
